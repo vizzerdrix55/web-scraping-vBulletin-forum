@@ -6,6 +6,7 @@ The script has a built-in delay of average 1 second between two requests. This l
 Here is what each script (located under `scripts` directory) does
 - `1_generate URLs.py` generates URLs of every site of every forum and subforum of forum.pcgames.de and saves the list of URLs in `threadurls_new.txt` (will be created or overwritten in the same directory as the script)
 - `2_transform html to xml` transforms all HTML-files in directory 'directory_in_str' to xml and takes caution to their filenames. Date, title (where existing), username and content of a post will be extracted. Quotes will be excluded.
+
 At the end you will have one .html (print-version) and one .xml file of every webpage that includes posts in the forum. 
 ## Requirements
 install pip and then python:
