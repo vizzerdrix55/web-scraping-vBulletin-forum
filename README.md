@@ -1,6 +1,22 @@
 # web-scraping-forum-vBulletin
+## Overview
 This repository includes a web scraper written in Python for self-development of a collection of the posts (incl. usernames, titels and daten). Its core features uses python modules requests, re and BeautifulSoup. It has been tailored for the vBulletin-Software forum.pcgames.de. The spider can easily be updated for other sites.
 The script has a built-in delay of average 1 second between two requests. This limit was defined in direct conversation with the operator of forum.pcgames.de
-Generating all urls takes about 4 days in total.
-The scraper downloads the html-files (one per site) for further processing.
-Code will follow until end of april 2019
+## Description
+Here is what each script (located under `scripts` directory) does
+- `1_generate URLs.py` generates URLs of every site of every forum and subforum of forum.pcgames.de and saves the list of URLs in `threadurls_new.txt` (will be created or overwritten in the same directory as the script)
+- `2_transform html to xml` transforms all HTML-files in directory 'directory_in_str' to xml and takes caution to their filenames. Date, title (where existing), username and content of a post will be extracted. Quotes will be excluded.
+At the end you will have one .html (print-version) and one .xml file of every webpage that includes posts in the forum. 
+## Requirements
+install pip and then python:
+```
+sudo su
+wget https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py
+quit()
+```
+Python 3.5+
+Python module requests (install e.g. with `sudo python -m pip install requests` on your python instance)
+Python module BeautifulSoup (install e.g. with `sudo python -m pip install bs4` on your python instance)
+## Usage
+No installation needed. Simply have a look at all the markdown in the .py-files, copy them to your python instance of choice and run them using e.g. `sudo nohup python3 [script-name] > nohup.out` where [script-name] stands for the file's name. Keep in mind that scraping a big forum needs a lot of time. Performing both scripts on forum.pcgames.de took 120 hours.
