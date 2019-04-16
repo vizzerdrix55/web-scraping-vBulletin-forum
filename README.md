@@ -3,7 +3,7 @@
 This repository includes a web scraper written in Python for self-development of a collection of the posts (incl. usernames, titels and daten). Its core features uses python modules requests, re and BeautifulSoup. It has been tailored for the vBulletin-Software forum.pcgames.de. The spider can easily be updated for other sites.
 The script has a built-in delay of average 1 second between two requests. This limit was defined in direct conversation with the operator of forum.pcgames.de
 ## How to run
-Here is what each script does
+Follow these steps to become owner of the .html and .xml files of every post of your vBulletin-forum of choice.
 1. `1_generate URLs.py` generates URLs of every site of every forum and subforum of forum.pcgames.de and saves the list of URLs in `threadurls_new.txt` (will be created or overwritten in the same directory as the script). You can 
 2. Download the HTML-files of every URL in `threadurls_new.txt`. For example you could use the basic unix command `wget` as follows: `sudo nohup wget -i threadurls_new.txt -P htmls/ -o wget.log > nohup.out`
 3. `2_transform html to xml` transforms all HTML-files in directory `directory_in_str` to xml and takes caution to their filenames. Date, title (where existing), username and content of a post will be extracted. Quotes will be excluded.
