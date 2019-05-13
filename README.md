@@ -1,6 +1,6 @@
 # web-scraping-forum-vBulletin
 ## Overview
-This repository includes a web scraper written in Python for self-development of a collection of the posts (incl. usernames, titels and daten). Its core features uses python modules requests, re and BeautifulSoup. It has been tailored for the vBulletin-Software forum.pcgames.de. The spider can easily be updated for other sites.
+This repository includes a web scraper written in Python for self-development of a collection of the posts (incl. usernames, titels and dates). Its core features uses python modules requests, re and BeautifulSoup. It has been tailored for the vBulletin-Software forum.pcgames.de. The spider can easily be updated for other sites.
 The script has a built-in delay of average 1 second between two requests. This limit was defined in direct conversation with the operator of forum.pcgames.de
 ## What is Python?
 "Python is a high-level programming language that has been developed since 1991 with the goal of easy learning and applicability. Python is open source. The application is widely used, for example, in the field of data science and in the analysis of scientific research data. Numerous extension libraries make Python attractive beyond these fields of application, especially since scripts in comparatively compact written code can be flexibly referenced to specific automation requirements." (translation of German text by Lennarzt 2018)
